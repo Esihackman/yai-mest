@@ -1,4 +1,6 @@
-import InnovatorImage from '../../../images/innovator.png';
+import HelmetImage1 from '../../../images/showhelmet3.png';
+import HelmetImage2 from '../../../images/showhelmet2.png';
+import HelmetImage3 from '../../../images/showhelmet1.png';
 
 export default function ShowcaseSection() {
   return (
@@ -14,7 +16,7 @@ export default function ShowcaseSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow">
             <img
-              src={InnovatorImage}
+              src={HelmetImage1}
               alt="Real-Time Tracking"
               className="w-full h-56 object-cover rounded-2xl mb-4"
             />
@@ -28,7 +30,7 @@ export default function ShowcaseSection() {
           </div>
           <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow">
             <img
-              src={InnovatorImage}
+              src={HelmetImage2}
               alt="Low-Light Sensors"
               className="w-full h-56 object-cover rounded-2xl mb-4"
             />
@@ -42,7 +44,7 @@ export default function ShowcaseSection() {
           </div>
           <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow">
             <img
-              src={InnovatorImage}
+              src={HelmetImage3}
               alt="Durable Design"
               className="w-full h-56 object-cover rounded-2xl mb-4"
             />
