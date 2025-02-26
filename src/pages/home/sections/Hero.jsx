@@ -35,7 +35,7 @@ const slides = [
 
 export default function HeroSection() {
   return (
-    <section id="home" className="w-full h-[90vh] relative bg-white overflow-hidden">
+    <section id="home" className="w-full h-screen relative bg-white overflow-hidden">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         navigation={{
@@ -57,17 +57,17 @@ export default function HeroSection() {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div
-              className="w-full h-[90vh] bg-cover bg-center bg-no-repeat relative flex items-center justify-center text-center transition-all duration-1000"
+              className="w-full h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center text-center transition-all duration-1000"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.image})`,
                 backgroundSize: 'cover',
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60" />
-              
+
               <div className="container mx-auto px-4 relative z-20 transform transition-all duration-1000">
-                <h2 
-                  className="text-white text-3xl md:text-6xl font-bold mb-6 opacity-0 translate-y-8 animate-slideUp"
+                <h2
+                  className="text-white text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold mb-2 sm:mb-4 opacity-0 translate-y-8 animate-slideUp"
                   style={{
                     animation: 'slideUp 0.8s ease-out forwards',
                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
@@ -75,8 +75,8 @@ export default function HeroSection() {
                 >
                   {slide.title}
                 </h2>
-                <p 
-                  className="text-white/90 text-lg md:text-2xl max-w-3xl mx-auto mb-8 opacity-0 translate-y-8 animate-slideUp"
+                <p
+                  className="text-white/90 text-sm sm:text-base md:text-lg lg:text-2xl max-w-full md:max-w-3xl mx-auto mb-2 sm:mb-4 opacity-0 translate-y-8 animate-slideUp"
                   style={{
                     animation: 'slideUp 0.8s ease-out 0.2s forwards',
                     textShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)',
@@ -84,19 +84,11 @@ export default function HeroSection() {
                 >
                   {slide.description}
                 </p>
-                {/* <button 
-                  className="px-8 py-4 bg-blue-600 text-white text-lg rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 opacity-0 translate-y-8 animate-slideUp"
-                  style={{
-                    animation: 'slideUp 0.8s ease-out 0.4s forwards',
-                  }}
-                >
-                  Learn More
-                </button> */}
               </div>
             </div>
           </SwiperSlide>
         ))}
-        
+
         <div className="swiper-button-prev !text-white after:!text-2xl hover:scale-110 transition-transform duration-300"></div>
         <div className="swiper-button-next !text-white after:!text-2xl hover:scale-110 transition-transform duration-300"></div>
       </Swiper>
