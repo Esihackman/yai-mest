@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { Check } from 'lucide-react';
-import HelmetImage1 from '../../../images/showhelmet3.png';
+import HelmetImage1 from '../../../images/showhelmet6.png';
 import HelmetImage2 from '../../../images/showhelmet2.png';
 import HelmetImage3 from '../../../images/showhelmet1.png';
+import HelmetImage4 from '../../../images/showhelmet4.png';
+import HelmetImage5 from '../../../images/showhelmet5.png';
+import HelmetImage6 from '../../../images/showhelmet3.png';
 
 export default function ShowcaseSection() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -25,6 +28,24 @@ export default function ShowcaseSection() {
       title: "Durable Design",
       description: "Built for tough environments, the helmets combine durability with cutting-edge technology for maximum protection.",
       features: ["Impact Resistant", "Weather Proof", "Comfort Fit"]
+    },
+    {
+      image: HelmetImage4,
+      title: "Advanced Communication",
+      description: "Stay connected with integrated communication systems, ensuring seamless coordination during operations.",
+      features: ["Built-in Microphone", "Noise Cancellation", "Long-range Connectivity"]
+    },
+    {
+      image: HelmetImage5,
+      title: "Thermal Detection",
+      description: "Identify heat signatures in challenging environments with advanced thermal detection capabilities for proactive safety measures.",
+      features: ["Infrared Sensors", "Real-Time Monitoring", "High Sensitivity"]
+    },
+    {
+      image: HelmetImage6,
+      title: "Smart Alerts",
+      description: "Receive intelligent alerts for environmental hazards and potential risks, ensuring maximum situational awareness.",
+      features: ["Hazard Detection", "Vibration Alerts", "Voice Notifications"]
     }
   ];
 
@@ -43,7 +64,7 @@ export default function ShowcaseSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {cards.map((card, index) => (
             <div
               key={card.title}
@@ -52,23 +73,23 @@ export default function ShowcaseSection() {
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-blue-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
+
               <div className="relative">
                 <img
                   src={card.image}
                   alt={card.title}
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                
+
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-blue-600 mb-3 group-hover:text-white relative z-10">
                     {card.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-white/90 relative z-10">
                     {card.description}
                   </p>
-                  
+
                   <div className="space-y-2 relative z-10">
                     {card.features.map((feature) => (
                       <div
