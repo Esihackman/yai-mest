@@ -14,9 +14,13 @@ export default function Navbar() {
   }, []);
 
   const handleLinkClick = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (id === 'hero') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
     setIsOpen(false);
   };
@@ -30,7 +34,7 @@ export default function Navbar() {
             padding: 0;
           }
           #hero {
-            margin-top: 45px; /* Reduced from 64px to match new navbar height */
+            margin-top: 45px; /* Adjusted to match new navbar height */
           }
         `}
       </style>
@@ -42,15 +46,13 @@ export default function Navbar() {
         }`}
         style={{ margin: 0, padding: 0 }}
       >
-       <div className="container mx-auto px-4 h-14 flex justify-between items-center">
-  <div
-    className="text-2xl font-bold cursor-pointer transition-colors duration-300 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent hover:from-yellow-500 hover:to-yellow-700"
-    onClick={() => handleLinkClick('hero')}
-  >
-    Assurob
-  </div>
-
-
+        <div className="container mx-auto px-4 h-14 flex justify-between items-center">
+          <div
+            className="text-2xl font-bold cursor-pointer transition-colors duration-300 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent hover:from-yellow-500 hover:to-yellow-700"
+            onClick={() => handleLinkClick('hero')}
+          >
+            Assurob
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -58,10 +60,11 @@ export default function Navbar() {
               <button
                 key={item}
                 onClick={() => handleLinkClick(item.toLowerCase())}
-                className="relative group py-2 text-gray-700 hover:text-yellow-600 transition-colors duration-300"
+                className="relative group py-2 text-gray-700 hover:text-yellow-600 transition-colors duration-300 cursor-pointer"
               >
                 <span>{item}</span>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow[hn]y;'-600 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
+                {/* Underline effect */}
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
               </button>
             ))}
           </div>
@@ -91,7 +94,7 @@ export default function Navbar() {
               <button
                 key={item}
                 onClick={() => handleLinkClick(item.toLowerCase())}
-                className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 rounded-lg transition-colors duration-300"
+                className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-green-600 rounded-lg transition-colors duration-300 cursor-pointer"
               >
                 {item}
               </button>

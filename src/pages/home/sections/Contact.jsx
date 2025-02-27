@@ -34,7 +34,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-[#004721] mb-4 tracking-tight">
-            Contact the Innovator
+            Contact The Innovator
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Ready to revolutionize safety in your workplace? Let's discuss how our smart helmets can protect your team.
