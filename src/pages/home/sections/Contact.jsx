@@ -55,12 +55,14 @@ export default function ContactSection() {
                 <a href="mailto:assuahrobotics@example.com" 
                    className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group">
                   <Mail className="text-[#009c4a] w-6 h-6 group-hover:scale-110 transition-transform" />
-                  <span className="text-gray-700 group-hover:text-[#004721]">assuahrobotics@example.com</span>
+                  <span className="text-gray-700 group-hover:text-[#004721]">assurobotics@gmail.com
+                  </span>
                 </a>
                 <a href="tel:+233123456789"
                    className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group">
                   <Phone className="text-[#009c4a] w-6 h-6 group-hover:scale-110 transition-transform" />
-                  <span className="text-gray-700 group-hover:text-[#004721]">+233 123 456 789</span>
+                  <span className="text-gray-700 group-hover:text-[#004721]">+233200404997 / +233200404993
+                  </span>
                 </a>
                 <div className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group">
                   <MapPin className="text-[#009c4a] w-6 h-6 group-hover:scale-110 transition-transform" />

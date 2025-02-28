@@ -67,7 +67,7 @@ export default function HeroSection() {
 
               <div className="container mx-auto px-4 relative z-20 transform transition-all duration-1000">
                 <h2
-                  className="text-white text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold mb-2 sm:mb-4 opacity-0 translate-y-8 animate-slideUp"
+                  className="text-white text-3xl md:text-6xl font-bold mb-6 opacity-0 translate-y-8 animate-slideUp"
                   style={{
                     animation: 'slideUp 0.8s ease-out forwards',
                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
@@ -76,7 +76,7 @@ export default function HeroSection() {
                   {slide.title}
                 </h2>
                 <p
-                  className="text-white/90 text-sm sm:text-base md:text-lg lg:text-2xl max-w-full md:max-w-3xl mx-auto mb-2 sm:mb-4 opacity-0 translate-y-8 animate-slideUp"
+                  className="text-white/90 text-lg md:text-2xl max-w-3xl mx-auto mb-8 opacity-0 translate-y-8 animate-slideUp"
                   style={{
                     animation: 'slideUp 0.8s ease-out 0.2s forwards',
                     textShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)',
