@@ -56,7 +56,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {['Home', 'About', 'Products', 'Showcase', 'Contact'].map((item) => (
+            {['Home', 'About', 'Products', 'Testimonials', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => handleLinkClick(item.toLowerCase())}
@@ -90,7 +90,7 @@ export default function Navbar() {
           }`}
         >
           <div className="container mx-auto px-4 py-2 space-y-1">
-            {['Home', 'About', 'Products', 'Showcase', 'Contact'].map((item) => (
+            {['Home', 'About', 'Products', 'Testimonials', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => handleLinkClick(item.toLowerCase())}
