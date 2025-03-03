@@ -10,7 +10,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 20);
 
       // Detect which section is in view
-      const sections = ['home', 'about', 'products', 'testimonials', 'contact'];
+      const sections = ['home', 'products', 'about', 'testimonials', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -52,7 +52,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          {['Home', 'About', 'Products', 'Testimonials', 'Contact'].map((item) => (
+          {['Home', 'Products', 'About', 'Testimonials', 'Contact'].map((item) => (
             <button
               key={item}
               onClick={() => handleLinkClick(item.toLowerCase())}
@@ -79,7 +79,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div className={`md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <div className="container mx-auto px-4 py-2 space-y-1">
-          {['Home', 'About', 'Products', 'Testimonials', 'Contact'].map((item) => (
+          {['Home', 'Products', 'About', 'Testimonials', 'Contact'].map((item) => (
             <button
               key={item}
               onClick={() => handleLinkClick(item.toLowerCase())}
