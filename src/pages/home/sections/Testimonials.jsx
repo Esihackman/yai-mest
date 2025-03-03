@@ -251,14 +251,14 @@ export default function Testimonials() {
           <Typography variant="body1" className="text-gray-600 max-w-2xl mx-auto mb-8">
             Experience how John Assuah's electronic safety innovations can transform worker protection in your industry
           </Typography>
-          <Box 
+          {/* <Box 
             component="button"
             className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
           >
             Request a Consultation
-          </Box>
+          </Box> */}
         </motion.div>
       </Container>
     </section>
   );
-}
+} 
