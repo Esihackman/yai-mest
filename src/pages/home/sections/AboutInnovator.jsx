@@ -86,7 +86,7 @@ export default function About() {
                 sx={{ zIndex: 2 }}
               >
                 <Typography variant="h6">Founder & CEO</Typography>
-                <Typography variant="body2">Assuah Robotics</Typography>
+                <Typography variant="body2">Assuah's Robotics</Typography>
               </Box>
             </motion.div>
           </Grid>

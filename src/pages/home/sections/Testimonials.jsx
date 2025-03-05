@@ -15,7 +15,7 @@ export default function Testimonials() {
       color: "blue"
     },
     {
-      quote: "The smart safety helmets designed by Assuah Robotics provide our construction workers with unprecedented protection. The real-time tracking and environmental monitoring have become essential to our operations.",
+      quote: "The Intelligent Hand-Washing Machine designed by Assuah Robotics provides our workers with a seamless hygiene solution. The automated system ensures effective hand sanitization, significantly improving workplace safety standards.",
       author: "Abena Osei",
       position: "Project Manager, Accra Development Authority",
       avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80",
@@ -66,7 +66,6 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <Container maxWidth="lg">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,85 +90,6 @@ export default function Testimonials() {
           <Box className="w-24 h-1 bg-blue-600 mx-auto mt-6"></Box>
         </motion.div>
 
-        {/* Featured Testimonial */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-16"
-        >
-          <Paper 
-            elevation={3} 
-            className="relative overflow-hidden rounded-2xl"
-            sx={{ background: 'linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%)' }}
-          >
-            <Box className="absolute top-0 right-0 w-40 h-40 -mt-16 -mr-16 bg-blue-100 rounded-full opacity-70" />
-            <Box className="absolute bottom-0 left-0 w-32 h-32 -mb-12 -ml-12 bg-blue-100 rounded-full opacity-70" />
-            
-            <Grid container spacing={0}>
-              <Grid item xs={12} md={4} className="relative">
-                <Box 
-                  className="h-full bg-gradient-to-br from-blue-600 to-blue-800 p-8 flex flex-col justify-center items-center text-white"
-                  sx={{ minHeight: { xs: '200px', md: '100%' } }}
-                >
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                  >
-                    <Avatar 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80" 
-                      alt="Michael Osei"
-                      sx={{ width: 120, height: 120, border: '4px solid white', mb: 2 }}
-                    />
-                  </motion.div>
-                  <Typography variant="h6" className="font-bold text-center">
-                    Michael Osei
-                  </Typography>
-                  <Typography variant="body2" className="text-blue-100 text-center mb-3">
-                    Safety Director
-                  </Typography>
-                  <Typography variant="body2" className="text-blue-100 text-center font-bold">
-                    Ghana Construction Ltd.
-                  </Typography>
-                </Box>
-              </Grid>
-              
-              <Grid item xs={12} md={8}>
-                <Box className="p-8 md:p-12 relative">
-                  <FormatQuote 
-                    sx={{ 
-                      fontSize: 80, 
-                      color: 'rgba(21, 101, 192, 0.1)',
-                      position: 'absolute',
-                      top: 20,
-                      left: 20,
-                      transform: 'rotate(180deg)'
-                    }} 
-                  />
-                  
-                  <Box className="relative z-10 ml-6 mt-6">
-                    <Typography variant="h5" className="text-gray-800 font-medium italic mb-6 leading-relaxed">
-                      John Assuah's electronic safety innovations have completely revolutionized how we approach worker protection in our construction sites. His expertise in circuit design and sensor integration has created solutions that are both highly effective and reliable in demanding environments. The custom-designed tracking systems have reduced workplace incidents by over 65% in just one year.
-                    </Typography>
-                    
-                    <Box className="mb-4">
-                      <Rating value={5} readOnly size="large" />
-                    </Box>
-                    
-                    <Typography variant="body2" className="text-gray-600">
-                      After implementing Assuah Robotics' smart safety helmets across our operations in Ghana, we've seen dramatic improvements in both safety metrics and worker confidence. The real-time monitoring capabilities have transformed our emergency response protocols.
-                    </Typography>
-                  </Box>
-                </Box>
-              </Grid>
-            </Grid>
-          </Paper>
-        </motion.div> */}
-
-        {/* Testimonial Grid */}
         <Grid container spacing={4}>
           {testimonials.map((testimonial, index) => (
             <Grid item xs={12} md={6} key={index}>
@@ -237,7 +157,6 @@ export default function Testimonials() {
           ))}
         </Grid>
 
-        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -251,14 +170,8 @@ export default function Testimonials() {
           <Typography variant="body1" className="text-gray-600 max-w-2xl mx-auto mb-8">
             Experience how John Assuah's electronic safety innovations can transform worker protection in your industry
           </Typography>
-          {/* <Box 
-            component="button"
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-          >
-            Request a Consultation
-          </Box> */}
         </motion.div>
       </Container>
     </section>
   );
-} 
+}

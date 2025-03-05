@@ -37,7 +37,7 @@ export default function ContactSection() {
             Contact The Innovator
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to revolutionize safety in your workplace? Let's discuss how our smart helmets can protect your team.
+            Ready to revolutionize safety in your workplace? Let's discuss how our intellingent hand washing machine can protect your team.
           </p>
         </div>
 
@@ -47,9 +47,9 @@ export default function ContactSection() {
             <div className="bg-white p-8 rounded-3xl shadow-lg space-y-6 transform transition-all duration-300 hover:shadow-xl">
               <h3 className="text-2xl font-semibold text-[#004721]">Get in Touch</h3>
               <p className="text-gray-700 leading-relaxed text-lg">
-                If you're interested in learning more about our innovative tracking helmets or have any inquiries,
+                If you're interested in learning more about our innovative intellingent hand washing machine or have any inquiries,
                 we're here to help. Our team is ready to discuss how our technology can enhance safety in
-                your construction and industrial environments.
+                your home and industrial environments.
               </p>
               <div className="space-y-6 text-lg">
                 <a href="mailto:assuahrobotics@example.com" 

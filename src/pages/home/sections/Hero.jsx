@@ -3,64 +3,63 @@ import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { Button, Box, Typography, Container } from '@mui/material';
-import { Engineering, LocationOn, WbSunny, Speed } from '@mui/icons-material';
+import { WaterDrop, Sanitizer, BubbleChart, ElectricBolt, Speed, TouchApp } from '@mui/icons-material';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-
-// Import images
-import HelmetImage from '../../../images/helmet1.png';
-import WorkersImage from '../../../images/helmet2.png';
-import NightSiteImage from '../../../images/helmet3.png';
+import handwashImage1 from '../../../images/washing5.png';
+import handwashImage2 from '../../../images/washing2.png';
+import handwashImage3 from '../../../images/washing3.png';
 
 const slides = [
   {
     id: 1,
-    title: 'Electronic Safety Innovations',
-    subtitle: 'By John Assuah, Electrical Engineer',
+    title: 'Intelligent Hand Washing Technology',
+    subtitle: 'By John Assuah, Electronic Engineer',
     description:
-      'Custom-designed electronic circuits with real-time location tracking and sensor technology for maximum worker protection.',
-    image: HelmetImage,
-    icon: <Engineering fontSize="large" />,
+      'Custom-designed electronic circuits with touchless sensors and smart water management for optimal hygiene and resource conservation.',
+    image: handwashImage1,
+    icon: <Sanitizer fontSize="large" />,
     color: 'blue',
     stats: [
-      { value: '78%', label: 'Incident Reduction' },
-      { value: '1m', label: 'Tracking Accuracy' },
-      { value: '48h', label: 'Battery Life' }
+      { value: '99.9%', label: 'Germ Reduction' },
+      { value: '40%', label: 'Water Savings' },
+      { value: '2s', label: 'Response Time' }
     ]
   },
   {
     id: 2,
-    title: 'Proprietary IC Programming',
+    title: 'Proprietary Sensor Technology',
     subtitle: 'Advanced Circuit Design',
     description:
-      'Leveraging 12+ years of IC programming expertise to create intelligent safety systems that respond in milliseconds to potential hazards.',
-    image: WorkersImage,
-    icon: <Speed fontSize="large" />,
+      'Leveraging 12+ years of IC programming expertise to create intelligent systems that precisely dispense soap and water with zero contact.',
+    image: handwashImage2,
+    icon: <TouchApp fontSize="large" />,
     color: 'amber',
     stats: [
-      { value: '0.5s', label: 'Response Time' },
+      { value: '0.5s', label: 'Detection Time' },
       { value: '99.8%', label: 'Reliability' },
-      { value: '4G/BT', label: 'Connectivity' }
+      { value: 'IoT', label: 'Connectivity' }
     ]
   },
   {
     id: 3,
-    title: 'Smart Sensor Technology',
-    subtitle: 'Environmental Awareness',
+    title: 'Smart Resource Management',
+    subtitle: 'Eco-Friendly Innovation',
     description:
-      'Custom-designed sensor arrays automatically detect environmental conditions and adjust safety parameters for optimal worker protection.',
-    image: NightSiteImage,
-    icon: <WbSunny fontSize="large" />,
+      'Custom-designed microcontrollers monitor usage patterns and automatically optimize water and soap dispensing for maximum efficiency.',
+    image: handwashImage3,
+    icon: <WaterDrop fontSize="large" />,
     color: 'green',
     stats: [
-      { value: '100%', label: 'Low-light Detection' },
-      { value: '12+', label: 'Sensor Types' },
-      { value: '360°', label: 'Coverage' }
+      { value: '60%', label: 'Energy Efficient' },
+      { value: '12+', label: 'Smart Features' },
+      { value: '24/7', label: 'Monitoring' }
     ]
   }
 ];
+
 
 export default function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -85,13 +84,31 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="w-full h-[600px] md:h-[500px] relative bg-gray-900 overflow-hidden">
-      {/* Animated background pattern */}
+      {/* Animated background pattern - water droplets */}
       <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTAgMTJjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTAgMTJjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTEyLTI0YzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00em0wIDEyYzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00em0wIDEyYzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+')] bg-repeat animate-pulse" style={{ animationDuration: '15s' }}></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzAgMzBjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTAgMTJjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTAgMTJjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTEyLTI0YzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00em0wIDEyYzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00em0wIDEyYzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+')] bg-repeat animate-pulse" style={{ animationDuration: '15s' }}></div>
       </div>
 
       {/* Circuit board pattern overlay */}
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4NiIgaGVpZ2h0PSI4NiI+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj4KPHBhdGggZD0iTTQzLDM1IEw0Myw1MSI+PC9wYXRoPgo8cGF0aCBkPSJNNTEsNDMgTDM1LDQzIj48L3BhdGg+CjxwYXRoIGQ9Ik0zMCwzMCBMNTYsNTYiPjwvcGF0aD4KPHBhdGggZD0iTTU2LDMwIEwzMCw1NiI+PC9wYXRoPgo8Y2lyY2xlIGN4PSI0MyIgY3k9IjQzIiByPSIyMCI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjQzIiBjeT0iNDMiIHI9IjEwIj48L2NpcmNsZT4KPGNpcmNsZSBjeD0iNDMiIGN5PSI0MyIgcj0iMyI+PC9jaXJjbGU+CjwvZz4KPC9zdmc+')] bg-repeat"></div>
+
+      {/* Water droplet animations */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {[...Array(10)].map((_, i) => (
+          <div 
+            key={i}
+            className="absolute rounded-full bg-blue-500/20 animate-ping"
+            style={{
+              width: `${Math.random() * 30 + 10}px`,
+              height: `${Math.random() * 30 + 10}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${Math.random() * 3 + 2}s`,
+              animationDelay: `${Math.random() * 2}s`
+            }}
+          ></div>
+        ))}
+      </div>
 
       {/* Main slider */}
       <Swiper
@@ -125,7 +142,7 @@ export default function HeroSection() {
               {/* Gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-r ${getColorClass(slide.color)} opacity-40`} />
               
-              {/* Animated circuit lines */}
+              {/* Animated water flow lines */}
               <div className="absolute inset-0 overflow-hidden">
                 <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
                   <path 
@@ -201,7 +218,30 @@ export default function HeroSection() {
                       transition={{ duration: 0.6, delay: 0.6 }}
                       className="flex gap-3"
                     >
-                     
+                      {/* <Button 
+                        variant="contained" 
+                        size="medium"
+                        className={`bg-gradient-to-r ${getColorClass(slide.color)} hover:shadow-lg transition-all duration-300`}
+                        sx={{ 
+                          borderRadius: '30px',
+                          textTransform: 'none',
+                          fontWeight: 'bold'
+                        }}
+                        startIcon={<BubbleChart />}
+                      >
+                        Explore Solutions
+                      </Button>
+                      <Button 
+                        variant="outlined" 
+                        size="medium"
+                        className="border-white text-white hover:bg-white/10 transition-all duration-300"
+                        sx={{ 
+                          borderRadius: '30px',
+                          textTransform: 'none'
+                        }}
+                      >
+                        Watch Demo
+                      </Button> */}
                     </motion.div>
                   </motion.div>
                   
@@ -214,7 +254,7 @@ export default function HeroSection() {
                   >
                     <div className="bg-black/30 backdrop-blur-sm rounded-xl p-5 border border-white/10 shadow-xl">
                       <Typography variant="subtitle2" className="text-white/80 mb-4 font-medium">
-                        Electronic Safety Metrics
+                        Intelligent Handwashing Metrics
                       </Typography>
                       
                       <div className="grid grid-cols-3 gap-3">
@@ -250,7 +290,7 @@ export default function HeroSection() {
                       
                       <div className="mt-4 pt-3 border-t border-white/10">
                         <div className="flex items-center">
-                          <LocationOn className="text-white/60 mr-2" fontSize="small" />
+                          <ElectricBolt className="text-white/60 mr-2" fontSize="small" />
                           <Typography variant="caption" className="text-white/80">
                             Designed & Engineered in Sekondi-Takoradi, Ghana
                           </Typography>
@@ -316,17 +356,24 @@ export default function HeroSection() {
             background-color: rgba(0, 0, 0, 0.5);
           }
           
-          /* Animated gradient background */
-          @keyframes gradientAnimation {
+          /* Water droplet animation */
+          @keyframes droplet {
             0% {
-              background-position: 0% 50%;
+              transform: translateY(0) scale(1);
+              opacity: 0.7;
             }
-            50% {
-              background-position: 100% 50%;
+            70% {
+              transform: translateY(30px) scale(0.9);
+              opacity: 0.5;
             }
             100% {
-              background-position: 0% 50%;
+              transform: translateY(40px) scale(0.8);
+              opacity: 0;
             }
+          }
+          
+          .droplet {
+            animation: droplet 2s infinite;
           }
         `}
       </style>
