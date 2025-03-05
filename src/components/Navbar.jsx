@@ -37,7 +37,7 @@ export default function Navbar() {
       }
     }
     setIsOpen(false);
-    setActiveSection(id); // Update active section on click
+    setActiveSection(id); 
   };
 
   return (

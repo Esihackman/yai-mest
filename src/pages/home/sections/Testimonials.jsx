@@ -164,12 +164,6 @@ export default function Testimonials() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 text-center"
         >
-          <Typography variant="h5" className="text-gray-800 mb-4">
-            Join the growing list of satisfied clients
-          </Typography>
-          <Typography variant="body1" className="text-gray-600 max-w-2xl mx-auto mb-8">
-            Experience how John Assuah's electronic safety innovations can transform worker protection in your industry
-          </Typography>
         </motion.div>
       </Container>
     </section>

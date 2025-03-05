@@ -110,7 +110,7 @@ const ProductSection = () => {
   };
 
   return (
-    <Container id="product-section" maxWidth="lg" className="py-16">
+    <Container id="products" maxWidth="lg" className="py-16">
       <motion.div
         ref={ref}
         initial="hidden"

@@ -218,30 +218,6 @@ export default function HeroSection() {
                       transition={{ duration: 0.6, delay: 0.6 }}
                       className="flex gap-3"
                     >
-                      {/* <Button 
-                        variant="contained" 
-                        size="medium"
-                        className={`bg-gradient-to-r ${getColorClass(slide.color)} hover:shadow-lg transition-all duration-300`}
-                        sx={{ 
-                          borderRadius: '30px',
-                          textTransform: 'none',
-                          fontWeight: 'bold'
-                        }}
-                        startIcon={<BubbleChart />}
-                      >
-                        Explore Solutions
-                      </Button>
-                      <Button 
-                        variant="outlined" 
-                        size="medium"
-                        className="border-white text-white hover:bg-white/10 transition-all duration-300"
-                        sx={{ 
-                          borderRadius: '30px',
-                          textTransform: 'none'
-                        }}
-                      >
-                        Watch Demo
-                      </Button> */}
                     </motion.div>
                   </motion.div>
                   
