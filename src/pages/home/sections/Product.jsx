@@ -23,6 +23,11 @@ const productDetails = {
     powerConsumption: "Low-power smart operation",
     chargingTime: "4-6 hours to full charge"
   },
+  // certifications: [
+  //   { name: "Ghana Standard Authority (GSA)", icon: <VerifiedUser /> },
+  //   { name: "Energy Efficiency Certified", icon: <EmojiObjects /> },
+  //   { name: "Quality Assurance Tested", icon: <CheckCircle /> }
+  // ],
   construction: [
     { feature: "Aircraft-Grade Aluminum Frame", description: "Corrosion-resistant and durable" },
     { feature: "IP65 Water & Dust Protection", description: "Suitable for harsh environments" },
@@ -105,7 +110,7 @@ const ProductSection = () => {
   };
 
   return (
-    <Container id="products" maxWidth="lg" className="py-16">
+    <Container id="product-section" maxWidth="lg" className="py-16">
       <motion.div
         ref={ref}
         initial="hidden"
@@ -138,6 +143,7 @@ const ProductSection = () => {
         {/* Main Product Display */}
         <Card elevation={4} className="mb-12 overflow-hidden rounded-xl">
           <Grid container>
+            {/* Product Image Carousel */}
             <Grid item xs={12} md={6}>
               <Box className="relative h-full">
                 <Box 
@@ -147,9 +153,14 @@ const ProductSection = () => {
                   className="w-full h-full object-cover"
                   sx={{ minHeight: '400px' }}
                 />
+                <Box 
+                  className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+                />
+               
               </Box>
             </Grid>
 
+            {/* Product Details */}
             <Grid item xs={12} md={6}>
               <Box className="p-6">
                 <Tabs 
@@ -210,12 +221,93 @@ const ProductSection = () => {
                         ))}
                       </Grid>
                     )}
+
+                    {activeTab === 1 && (
+                      <Box>
+                        {Object.entries(productDetails.technicalSpecs).map(([key, value], index) => (
+                          <Box key={index} className="mb-4">
+                            <Typography variant="subtitle2" className="text-gray-600 capitalize">
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </Typography>
+                            <Typography variant="body1" className="font-medium">
+                              {value}
+                            </Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    )}
+
+                    {activeTab === 2 && (
+                      <Box>
+                        {Object.entries(productDetails.powerSpecs).map(([key, value], index) => (
+                          <Box key={index} className="mb-4">
+                            <Typography variant="subtitle2" className="text-gray-600 capitalize">
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </Typography>
+                            <Typography variant="body1" className="font-medium">
+                              {value}
+                            </Typography>
+                          </Box>
+                        ))}
+                      </Box>
+                    )}
                   </motion.div>
                 </AnimatePresence>
               </Box>
             </Grid>
           </Grid>
         </Card>
+
+        {/* Construction Details */}
+        <Grid container spacing={4} className="mb-12">
+          {productDetails.construction.map((item, index) => (
+            <Grid item xs={12} sm={6} md={3} key={index}>
+              <motion.div
+                variants={itemVariants}
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Paper elevation={2} className="p-4 h-full">
+                  <Typography variant="h6" className="font-semibold mb-2">
+                    {item.feature}
+                  </Typography>
+                  <Typography variant="body2" className="text-gray-600">
+                    {item.description}
+                  </Typography>
+                </Paper>
+              </motion.div>
+            </Grid>
+          ))}
+        </Grid>
+
+        {/* Call to Action */}
+        <motion.div variants={itemVariants} className="text-center">
+          <Paper 
+            elevation={4}
+            className="p-8 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl"
+          >
+            <Typography variant="h4" className="font-bold mb-4">
+              Experience the Future of Hand Hygiene
+            </Typography>
+            <Typography variant="body1" className="mb-6 max-w-2xl mx-auto">
+              Watch our innovative hand washing machine in action and discover how it's revolutionizing hygiene standards.
+            </Typography>
+            <Box className="flex gap-4 justify-center">
+              <Button
+                variant="contained"
+                size="large"
+                className="bg-white text-blue-700 hover:bg-blue-50"
+                startIcon={<YouTube />}
+                href="https://www.youtube.com/results?search_query=assurob"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Watch Demo
+              </Button>
+              
+            </Box>
+          </Paper>
+        </motion.div>
       </motion.div>
     </Container>
   );
