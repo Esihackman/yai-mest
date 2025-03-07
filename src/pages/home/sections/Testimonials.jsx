@@ -15,7 +15,7 @@ export default function Testimonials() {
       color: "blue"
     },
     {
-      quote: "The Intelligent Hand-Washing Machine designed by Assuah Robotics provides our workers with a seamless hygiene solution. The automated system ensures effective hand sanitization, significantly improving workplace safety standards.",
+      quote: "The Intelligent Hand-Washing Machine designed by Assuah's Robotics provides our workers with a seamless hygiene solution. The automated system ensures effective hand sanitization, significantly improving workplace safety standards.",
       author: "Abena Osei",
       position: "Project Manager, Accra Development Authority",
       avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80",

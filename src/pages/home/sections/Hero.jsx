@@ -8,8 +8,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import handwashImage1 from '../../../images/washing5.png';
-import handwashImage2 from '../../../images/washing2.png';
+import handwashImage1 from '../../../images/washing1.png';
+import handwashImage2 from '../../../images/washing4.png';
 import handwashImage3 from '../../../images/washing3.png';
 
 const slides = [

@@ -29,10 +29,10 @@ const productDetails = {
   //   { name: "Quality Assurance Tested", icon: <CheckCircle /> }
   // ],
   construction: [
-    { feature: "Aircraft-Grade Aluminum Frame", description: "Corrosion-resistant and durable" },
-    { feature: "IP65 Water & Dust Protection", description: "Suitable for harsh environments" },
-    { feature: "Impact-Resistant Housing", description: "Reinforced structural integrity" },
-    { feature: "Smart Maintenance Design", description: "Easy access for servicing" }
+    { feature: "Water & Dust Resistant", description: "Sealed electronics to prevent damage." },
+    { feature: " Rustproof & Corrosion", description: " Long lifespan in humid and high-traffic environments." },
+    { feature: " Impact-Resistant Body", description: " Protects internal components from accidental falls or impacts" },
+    { feature: " Low-Maintenance Design", description: " Easy-to-replace parts and refillable soap/tissue compartments." }
   ],
   smartFeatures: [
     {
@@ -41,9 +41,14 @@ const productDetails = {
       description: "Advanced proximity sensors eliminate contact points"
     },
     {
+      icon: <BatteryFull />,
+      title: "Power Management",
+      description: "Intelligent energy conservation"
+    },
+    {
       icon: <WaterDrop />,
       title: "Smart Dispensing",
-      description: "Precise control of water and soap delivery"
+      description: "Precise control of water and soap delivery with minimal waste"
     },
     {
       icon: <VolumeUp />,
@@ -55,11 +60,7 @@ const productDetails = {
       title: "LCD Interface",
       description: "Visual guidance and system status"
     },
-    {
-      icon: <BatteryFull />,
-      title: "Power Management",
-      description: "Intelligent energy conservation"
-    },
+   
     {
       icon: <WbSunny />,
       title: "Solar Ready",
@@ -258,27 +259,39 @@ const ProductSection = () => {
           </Grid>
         </Card>
 
-        {/* Construction Details */}
-        <Grid container spacing={4} className="mb-12">
-          {productDetails.construction.map((item, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
-              <motion.div
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Paper elevation={2} className="p-4 h-full">
-                  <Typography variant="h6" className="font-semibold mb-2">
-                    {item.feature}
-                  </Typography>
-                  <Typography variant="body2" className="text-gray-600">
-                    {item.description}
-                  </Typography>
-                </Paper>
-              </motion.div>
-            </Grid>
-          ))}
-        </Grid>
+       {/* Construction Details Section Title */}
+       <Box className="text-center mb-8">
+  <Typography variant="h4" className="font-bold text-blue-800">
+    Durability Features
+  </Typography>
+  <Typography variant="body1" className="text-gray-600 max-w-2xl mx-auto">
+    This ensures that the Intelligent Hand Washing Machine delivers high performance, sustainability, and long-term reliability while maintaining top-tier hygiene standards.
+  </Typography>
+</Box>
+
+
+{/* Construction Details */}
+<Grid container spacing={4} className="mb-12">
+  {productDetails.construction.map((item, index) => (
+    <Grid item xs={12} sm={6} md={3} key={index}>
+      <motion.div
+        variants={itemVariants}
+        whileHover={{ y: -5 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <Paper elevation={2} className="p-4 h-full">
+          <Typography variant="h6" className="font-semibold mb-2">
+            {item.feature}
+          </Typography>
+          <Typography variant="body2" className="text-gray-600">
+            {item.description}
+          </Typography>
+        </Paper>
+      </motion.div>
+    </Grid>
+  ))}
+</Grid>
+
 
         {/* Call to Action */}
         <motion.div variants={itemVariants} className="text-center">
