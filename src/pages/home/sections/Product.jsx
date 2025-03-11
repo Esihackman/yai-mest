@@ -18,10 +18,10 @@ const productDetails = {
   tagline: "Next-Generation Hygiene Technology",
   description: "Revolutionary touchless handwashing system with advanced sensors, real-time tracking, and sustainable solar-powered operation for optimal hygiene management.",
   powerSpecs: {
-    batteryLife: "168+ hours on full charge",
-    solarInput: "15-20V DC solar compatibility",
+    batteryLife: " The battery can last for a week and some days when fully charged",
+    solarInput: " Solar Panel Compatibility",
     powerConsumption: "Low-power smart operation",
-    chargingTime: "4-6 hours to full charge"
+    RechargeableLithiumIonBattery: " Long-lasting power with efficient energy use."
   },
   // certifications: [
   //   { name: "Ghana Standard Authority (GSA)", icon: <VerifiedUser /> },
@@ -68,9 +68,9 @@ const productDetails = {
     }
   ],
   technicalSpecs: {
-    sensors: "Multi-zone infrared proximity detection",
-    processor: "ARM Cortex-M4 microcontroller",
-    connectivity: "Optional WiFi/Bluetooth module",
+    WeightOfTheIntelligentHandWashingMachine: "11Kg",
+    // processor: "ARM Cortex-M4 microcontroller",
+    connectivity: "No Connection",
     waterSaving: "Up to 40% reduction in water usage",
     maintenance: "Smart monitoring with predictive alerts"
   }

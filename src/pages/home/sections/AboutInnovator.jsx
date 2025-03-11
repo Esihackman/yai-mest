@@ -174,7 +174,7 @@ export default function About() {
           <Box className="max-w-3xl mx-auto bg-gradient-to-r from-blue-50 to-amber-50 p-8 rounded-xl relative">
             <Box className="text-6xl text-blue-200 absolute top-4 left-4">"</Box>
             <Typography variant="h5" className="italic text-gray-700 relative z-10 px-8">
-              My mission is to create technology that not only protects workers but empowers them to perform at their best, knowing they are safe in any environment.
+            Becoming the tech powerhouse in Africa and the world is our main focus. And by using our vast insight and experience in technology, creating solutions to the many problems of everyday life. We seek, by our actions, to establish the most interactive, creative and innovative environment in Ghana, to ensure that the next generation carries that culture beyond the boundaries of Africa
             </Typography>
             <Box className="text-6xl text-blue-200 absolute bottom-4 right-4">"</Box>
             <Typography variant="subtitle1" className="mt-4 font-semibold text-blue-800">

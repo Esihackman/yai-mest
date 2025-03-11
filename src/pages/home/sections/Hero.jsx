@@ -15,10 +15,10 @@ import handwashImage3 from '../../../images/washing3.png';
 const slides = [
   {
     id: 1,
-    title: 'Intelligent Hand Washing Technology',
+    title: 'Intelligent Hand Washing Machine',
     subtitle: 'By John Assuah, Electronic Engineer',
     description:
-      'Custom-designed electronic circuits with touchless sensors and smart water management for optimal hygiene and resource conservation.',
+      'The Intelligent Hand Washing Machine delivers high performance, sustainability, and long-term reliability while maintaining top-tier hygiene standards.',
     image: handwashImage1,
     icon: <Sanitizer fontSize="large" />,
     color: 'blue',
@@ -30,25 +30,25 @@ const slides = [
   },
   {
     id: 2,
-    title: 'Proprietary Sensor Technology',
-    subtitle: 'Advanced Circuit Design',
+    title: ' Smart Lighting & LCD Display',
+    // subtitle: 'Advanced Circuit Design',
     description:
-      'Leveraging 12+ years of IC programming expertise to create intelligent systems that precisely dispense soap and water with zero contact.',
+      ' Illuminates in the dark and provides step-by-step guidance.',
     image: handwashImage2,
     icon: <TouchApp fontSize="large" />,
     color: 'amber',
     stats: [
       { value: '0.5s', label: 'Detection Time' },
-      { value: '99.8%', label: 'Reliability' },
+      { value: '99.9%', label: 'Reliability' },
       { value: 'IoT', label: 'Connectivity' }
     ]
   },
   {
     id: 3,
-    title: 'Smart Resource Management',
+    title: ' Auto Soap & Water Dispensing ',
     subtitle: 'Eco-Friendly Innovation',
     description:
-      'Custom-designed microcontrollers monitor usage patterns and automatically optimize water and soap dispensing for maximum efficiency.',
+      ' Ensures proper handwashing with minimal waste.',
     image: handwashImage3,
     icon: <WaterDrop fontSize="large" />,
     color: 'green',
