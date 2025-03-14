@@ -31,7 +31,6 @@ const slides = [
   {
     id: 2,
     title: ' Smart Lighting & LCD Display',
-    // subtitle: 'Advanced Circuit Design',
     description:
       ' Illuminates in the dark and provides step-by-step guidance.',
     image: handwashImage2,
@@ -84,32 +83,6 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="w-full h-[600px] md:h-[500px] relative bg-gray-900 overflow-hidden">
-      {/* Animated background pattern - water droplets */}
-      <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzAgMzBjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTAgMTJjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTAgMTJjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNC0xLjc5IDQtNCA0LTQtMS43OS00LTR6bTEyLTI0YzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00em0wIDEyYzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00em0wIDEyYzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+')] bg-repeat animate-pulse" style={{ animationDuration: '15s' }}></div>
-      </div>
-
-      {/* Circuit board pattern overlay */}
-      <div className="absolute inset-0 z-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4NiIgaGVpZ2h0PSI4NiI+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj4KPHBhdGggZD0iTTQzLDM1IEw0Myw1MSI+PC9wYXRoPgo8cGF0aCBkPSJNNTEsNDMgTDM1LDQzIj48L3BhdGg+CjxwYXRoIGQ9Ik0zMCwzMCBMNTYsNTYiPjwvcGF0aD4KPHBhdGggZD0iTTU2LDMwIEwzMCw1NiI+PC9wYXRoPgo8Y2lyY2xlIGN4PSI0MyIgY3k9IjQzIiByPSIyMCI+PC9jaXJjbGU+CjxjaXJjbGUgY3g9IjQzIiBjeT0iNDMiIHI9IjEwIj48L2NpcmNsZT4KPGNpcmNsZSBjeD0iNDMiIGN5PSI0MyIgcj0iMyI+PC9jaXJjbGU+CjwvZz4KPC9zdmc+')] bg-repeat"></div>
-
-      {/* Water droplet animations */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        {[...Array(10)].map((_, i) => (
-          <div 
-            key={i}
-            className="absolute rounded-full bg-blue-500/20 animate-ping"
-            style={{
-              width: `${Math.random() * 30 + 10}px`,
-              height: `${Math.random() * 30 + 10}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 3 + 2}s`,
-              animationDelay: `${Math.random() * 2}s`
-            }}
-          ></div>
-        ))}
-      </div>
-
       {/* Main slider */}
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
@@ -141,39 +114,9 @@ export default function HeroSection() {
             >
               {/* Gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-r ${getColorClass(slide.color)} opacity-40`} />
-              
-              {/* Animated water flow lines */}
-              <div className="absolute inset-0 overflow-hidden">
-                <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                  <path 
-                    d="M0,50 Q150,25 300,50 T600,50" 
-                    fill="none" 
-                    stroke="rgba(255,255,255,0.1)" 
-                    strokeWidth="2"
-                    className="animate-pulse"
-                    style={{ animationDuration: '4s' }}
-                  />
-                  <path 
-                    d="M0,100 Q200,75 400,100 T800,100" 
-                    fill="none" 
-                    stroke="rgba(255,255,255,0.1)" 
-                    strokeWidth="2"
-                    className="animate-pulse"
-                    style={{ animationDuration: '6s' }}
-                  />
-                  <path 
-                    d="M0,150 Q250,125 500,150 T1000,150" 
-                    fill="none" 
-                    stroke="rgba(255,255,255,0.1)" 
-                    strokeWidth="2"
-                    className="animate-pulse"
-                    style={{ animationDuration: '5s' }}
-                  />
-                </svg>
-              </div>
-
               <Container maxWidth="lg" className="relative z-20 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+
                   {/* Left side content */}
                   <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -280,10 +223,6 @@ export default function HeroSection() {
           </SwiperSlide>
         ))}
 
-        {/* Custom navigation buttons */}
-        <div className="swiper-button-prev !text-white after:!text-lg hover:scale-110 transition-transform duration-300"></div>
-        <div className="swiper-button-next !text-white after:!text-lg hover:scale-110 transition-transform duration-300"></div>
-        
         {/* Slide indicators */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
           {slides.map((_, index) => (
